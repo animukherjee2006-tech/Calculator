@@ -4,21 +4,21 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 200vh;
-    background:none;
+    margin: 0;
+    background: none;
 }
 
+
 .calculator {
-    width: 90%;
-    max-width:350px;
-    height: 520px;
-    background-color: darkmagenta;
-    border-radius: 35px;       
+    width: 90%;         
+    max-width: 350px;     
     padding: 15px;
-    position: relative;
+    border-radius: 35px;
+    background-color: darkmagenta;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    border: 2px solid #333;    
+    border: 2px solid #333;
 }
+
 
 #val {
     width: 100%;
@@ -33,79 +33,50 @@ body {
     margin-bottom: 15px;
 }
 
+
 .input1 {
     display: flex;
     flex-wrap: wrap;   
     gap: 10px;
-    width: 230px;
-    height: 250px;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    background:white;
-    border-radius: 35px;  
+}
+.input1 button {
+    flex: 1 1 22%;     
+    min-width: 60px;
     padding: 15px;
-    position: relative;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    border: 2px solid #333;   
+    border-radius: 20px;
+    border: 2px solid #333;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: 0.2s;
 }
 
-.input1:hover{
-    background-color: slateblue;
-}
-
-.num,.op,.equal,.back,.clear,.dot {
-    width: 50px;
-    height: 50px;
-    justify-content: center;
-    text-align: center;
-    background:white;
-    border-radius: 20px;    
-    padding: 15px;
-    position: relative;
-    box-shadow: 0 10px 30px;
-    border: 2px solid #333;    
-}
-
-.equal{
-    background-color: skyblue;
-}
-
-.equal:hover{
-    background-color: blue;
-    color: black;
-}
-
-.num,.dot{
+/* Button colors */
+.num, .dot {
     background-color: antiquewhite;
     color: blue;
 }
-
-.num:hover{
-    background-color: grey;
-}
-
-.dot:hover{
-    background-color: grey;
-}
-
-.op{
+.op {
+    background-color: white;
     color: blue;
 }
-
-.op:hover{
-    color: black;
-    background-color: silver;
+.equal {
+    background-color: skyblue;
+}
+.back, .clear {
+    background-color: white;
 }
 
-.back:hover{
-    background-color: blue;
+.num:hover, .dot:hover, .op:hover, .equal:hover, .back:hover, .clear:hover {
+    filter: brightness(85%);
 }
 
-.clear:hover{
-    background-color: blue;
-}
 
-.calculator:hover{
-    background-color: darkblue;
+@media (max-width: 350px) {
+    .input1 button {
+        flex: 1 1 45%;  
+        padding: 12px;
+        font-size: 1rem;
+    }
 }
